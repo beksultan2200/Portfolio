@@ -1,0 +1,33 @@
+.hero {
+  padding: 40px 0;
+  &-col {
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    &__title {
+      font-size: calc(var(--index) * 3);
+    }
+    &__description {
+      font-size: calc(var(--index) * 2);
+    }
+    &__h3 {
+      font-size: calc(var(--index) * 20);
+    }
+  }
+}
+
+.fa-react {
+  color: var(--primary);
+  animation: reactRotate 6s ease-in-out infinite;
+}
+
+@keyframes reactRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,8 @@
+.projects{
+  &-cards{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 550px);
+    gap: 16px;
+  }
+}

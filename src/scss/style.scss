@@ -1,0 +1,54 @@
+@import url(../libs/fa/css/all.min.css);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Proxima Nova Cn Lt';
+  scroll-behavior: smooth;
+}
+
+:root {
+  --index: calc(1vw + 1vh);
+  --primary: #61dafb;
+  --bg-color: #202020;
+  --text-color: #fff;
+  --tab-color: #61dafb;
+}
+
+body{
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+a{
+  position: relative;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: .4s;
+
+  &::before{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 0%;
+    height: 1px;
+    background: var(--tab-color);
+    transition: .4s;
+  }
+
+  &:hover::before{
+    width: 100%;
+  }
+
+  &:hover{
+      color: var(--tab-color);
+    }
+}
+
+@import './nav';
+@import './hero';
+@import './about';
+@import './experience';
+@import './staks';
+@import './projects';

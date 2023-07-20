@@ -1,0 +1,83 @@
+.experience {
+  &__title {
+    text-align: center;
+    font-size: calc(var(--index) * 3);
+    line-height: calc(var(--index) * 5);
+  }
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    &-info {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      &-text-box {
+        &__title {
+          font-size: calc(var(--index) * 2);
+          line-height: calc(var(--index) * 2);
+        }
+        &__description {
+          font-size: calc(var(--index) * 1);
+          line-height: calc(var(--index) * 1.5);
+        }
+      }
+    }
+    &-technology {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+      &__title {
+        position: relative;
+        font-size: calc(var(--index) * 2);
+        line-height: calc(var(--index) * 2);
+        &::before {
+          position: absolute;
+          bottom: 0;
+          content: "";
+          display: block;
+          width: 100%;
+          height: 3px;
+          background: var(--primary);
+        }
+      }
+      &__ul{
+        padding-left: 25px;
+      }
+      &__li{
+        font-size: calc(var(--index) * 1);
+        line-height: calc(var(--index) * 1.8);
+        font-weight: 900;
+      }
+    }
+    &-tools {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+      &__title {
+        position: relative;
+        font-size: calc(var(--index) * 2);
+        line-height: calc(var(--index) * 2);
+        &::before {
+          position: absolute;
+          bottom: -5px;
+          content: "";
+          display: block;
+          width: 100%;
+          height: 3px;
+          background: var(--primary);
+        }
+      }
+      &__ul{
+        padding-left: 25px;
+      }
+      &__li{
+        font-size: calc(var(--index) * 1);
+        line-height: calc(var(--index) * 1.8);
+        font-weight: 900;
+      }
+    }
+  }
+}
