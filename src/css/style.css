@@ -263,6 +263,27 @@ a:hover {
 .projects-cards {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(2, 550px);
+  grid-template-columns: repeat(2, 50%);
   gap: 16px;
+}
+
+.card {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  background-color: var(--bg-color);
+  height: 360px;
+}
+.card__img {
+  height: 70%;
+  background: var(--primary);
+}
+.card-info {
+  height: 30%;
+}
+.card-info__title {
+  font-size: calc(var(--index) * 2);
+  line-height: calc(var(--index) * 2);
 }/*# sourceMappingURL=style.css.map */
