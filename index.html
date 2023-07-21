@@ -4,27 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Портфолио|Front-End</title>
-    <link rel="shortcut icon" href="./src/img/header/logo.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./src/img/header/logo.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="./src/css/style.css" />
     <link rel="stylesheet" href="./src/fonts/ProximaNova/stylesheet.css" />
-    <link
-      rel="stylesheet"
-      href="./src/libs/bootstrap-grid/bootstrap-grid.min.css"
-    />
   </head>
   <body>
-
     <header class="header">
       <div class="container">
-        <nav class="nav">
-          <img class="nav__logo" src="./src/img/header/logo.png" />
-          <ul class="nav__ul">
-            <li class="nav__li"><a href="#about">Обо мне</a></li>
-            <li class="nav__li"><a href="#staks">Мой стек</a></li>
-            <li class="nav__li"><a href="#">Проекты</a></li>
-            <li class="nav__li"><a href="#">Контакты</a></li>
-          </ul>
-        </nav>
+        <div class="header-desktop">
+          <nav class="header-nav">
+            <img class="header-nav__logo" src="./src/img/header/logo.png" />
+            <ul class="header-nav__ul">
+              <li class="header-nav__li"><a href="#about">Обо мне</a></li>
+              <li class="header-nav__li"><a href="#staks">Мой стек</a></li>
+              <li class="header-nav__li"><a href="#">Проекты</a></li>
+              <li class="header-nav__li"><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header-mobile">
+          <nav class="header-mobile-nav">
+            <img
+              class="header-mobile-nav__logo"
+              src="./src/img/header/logo.png"
+            />
+            <div onclick="menuToggle()" class="header-mobile-nav__burger"></div>
+            <div class="header-mobile-menu">
+              <ul class="header-mobile-menu__ul">
+                <li class="header-mobile-menu__li"><a onclick="menuToggle()" href="#about">Обо мне</a></li>
+                <li class="header-mobile-menu__li"><a onclick="menuToggle()" href="#staks">Мой стек</a></li>
+                <li class="header-mobile-menu__li"><a onclick="menuToggle()" href="#">Проекты</a></li>
+                <li class="header-mobile-menu__li"><a onclick="menuToggle()" href="#">Контакты</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
       </div>
     </header>
 
@@ -41,7 +59,7 @@
               </div>
             </div>
             <div class="col-5">
-              <div class="hero-col">
+              <div class="hero-col hero-col-logo">
                 <h3 class="hero-col__h3 react">
                   <i class="fa-brands fa-react"></i>
                 </h3>
@@ -71,8 +89,9 @@
               достижение успеха проектов.
             </p>
             <p class="about-text-box__p">
-              <i class="fa-solid fa-face-laugh-wink"></i> С нетерпением жду возможности обсудить, как я могу внести
-              значительный вклад в вашу компанию.
+              <i class="fa-solid fa-face-laugh-wink"></i> С нетерпением жду
+              возможности обсудить, как я могу внести значительный вклад в вашу
+              компанию.
             </p>
           </div>
         </section>
@@ -82,17 +101,29 @@
           <div class="experience-content">
             <div class="experience-content-info">
               <div class="experience-content-info-text-box">
-                <h3 class="experience-content-info-text-box__title">Front-End разработчик</h3>
-                <p class="experience-content-info-text-box__description">Хакатон | Full-time</p>
-                <p class="experience-content-info-text-box__description">с 29 июня по 7 июля</p>
-                <p class="experience-content-info-text-box__description">КГТУ им. И. Раззакова</p>
+                <h3 class="experience-content-info-text-box__title">
+                  Front-End разработчик
+                </h3>
+                <p class="experience-content-info-text-box__description">
+                  Хакатон | Full-time
+                </p>
+                <p class="experience-content-info-text-box__description">
+                  с 29 июня по 7 июля
+                </p>
+                <p class="experience-content-info-text-box__description">
+                  КГТУ им. И. Раззакова
+                </p>
               </div>
               <div class="experience-content-info-text-box">
-                <p class="experience-content-info-text-box__description">- Вёрстка веб приложения для Cargo Компаний</p>
+                <p class="experience-content-info-text-box__description">
+                  - Вёрстка веб приложения для Cargo Компаний
+                </p>
               </div>
             </div>
             <div class="experience-content-technology">
-              <h3 class="experience-content-technology__title">Стек технологий:</h3>
+              <h3 class="experience-content-technology__title">
+                Стек технологий:
+              </h3>
               <ul class="experience-content-technology__ul">
                 <li class="experience-content-technology__li">HTML 5</li>
                 <li class="experience-content-technology__li">CSS 3</li>
@@ -105,7 +136,9 @@
               <h3 class="experience-content-tools__title">Инструменты:</h3>
               <ul class="experience-content-tools__ul">
                 <li class="experience-content-tools__li">Webpack;</li>
-                <li class="experience-content-tools__li">Visual Studio Code;</li>
+                <li class="experience-content-tools__li">
+                  Visual Studio Code;
+                </li>
                 <li class="experience-content-tools__li">Figma;</li>
                 <li class="experience-content-tools__li">Vite;</li>
               </ul>
@@ -115,67 +148,112 @@
 
         <section class="staks" id="staks">
           <h3 class="staks__title">Мой стек</h3>
-          <div class="row">
+          <div class="row staks-row">
             <div class="col-2">
               <div class="staks-col">
-                <img class="staks-col__img" src="./src/img/staks/html5.svg" alt="">
+                <img
+                  class="staks-col__img"
+                  src="./src/img/staks/html5.svg"
+                  alt=""
+                />
                 <h3 class="staks-col__h3">HTML 5</h3>
               </div>
             </div>
             <div class="col-2">
               <div class="staks-col">
-                <img class="staks-col__img" src="./src/img/staks/css3.svg" alt="" class="staks-col__img">
+                <img
+                  class="staks-col__img"
+                  src="./src/img/staks/css3.svg"
+                  alt=""
+                  class="staks-col__img"
+                />
                 <h3 class="staks-col__h3">CSS 3</h3>
               </div>
             </div>
             <div class="col-2">
               <div class="staks-col">
-                <img class="staks-col__img" src="./src/img/staks/sass.svg" alt="" class="staks-col__img">
+                <img
+                  class="staks-col__img"
+                  src="./src/img/staks/sass.svg"
+                  alt=""
+                  class="staks-col__img"
+                />
                 <h3 class="staks-col__h3">SCSS</h3>
               </div>
             </div>
             <div class="col-2">
               <div class="staks-col">
-                <img class="staks-col__img" src="./src/img/staks/javascript.svg" alt="" class="staks-col__img">
+                <img
+                  class="staks-col__img"
+                  src="./src/img/staks/javascript.svg"
+                  alt=""
+                  class="staks-col__img"
+                />
                 <h3 class="staks-col__h3">JavaScript</h3>
               </div>
             </div>
             <div class="col-2">
               <div class="staks-col">
-                <img class="staks-col__img" src="./src/img/staks/react.svg" alt="" class="staks-col__img">
+                <img
+                  class="staks-col__img"
+                  src="./src/img/staks/react.svg"
+                  alt=""
+                  class="staks-col__img"
+                />
                 <h3 class="staks-col__h3">ReactJS</h3>
               </div>
             </div>
             <div class="col-2">
               <div class="staks-col">
-                <img class="staks-col__img" src="./src/img/staks/react-router.svg" alt="" class="staks-col__img">
+                <img
+                  class="staks-col__img"
+                  src="./src/img/staks/react-router.svg"
+                  alt=""
+                  class="staks-col__img"
+                />
                 <h3 class="staks-col__h3">React-Router</h3>
               </div>
             </div>
           </div>
           <h3 class="staks-tools__title">Инструменты и прочее:</h3>
-          <div class="row">
+          <div class="row staks-row">
             <div class="col-3">
               <div class="staks-col">
-                <img src="./src/img/staks/webstorm.svg" alt="" class="staks-col__img">
+                <img
+                  src="./src/img/staks/webstorm.svg"
+                  alt=""
+                  class="staks-col__img"
+                />
                 <h3 class="staks-col__h3">WebStorm</h3>
               </div>
             </div>
             <div class="col-3">
               <div class="staks-col">
-                <img src="./src/img/staks/vs-code.svg" alt="" class="staks-col__img">
+                <img
+                  src="./src/img/staks/vs-code.svg"
+                  alt=""
+                  class="staks-col__img"
+                />
                 <h3 class="staks-col__h3">VS Code</h3>
               </div>
             </div>
             <div class="col-3">
               <div class="staks-col">
-                <img src="./src/img/staks/webpack-original.svg" alt="" class="staks-col__img">
+                <img
+                  src="./src/img/staks/webpack-original.svg"
+                  alt=""
+                  class="staks-col__img"
+                />
                 <h3 class="staks-col__h3">Webpack</h3>
               </div>
             </div>
             <div class="col-3">
               <div class="staks-col">
-                <img src="./src/img/staks/git.svg" alt="" class="staks-col__img">
+                <img
+                  src="./src/img/staks/git.svg"
+                  alt=""
+                  class="staks-col__img"
+                />
                 <h3 class="staks-col__h3">Git</h3>
               </div>
             </div>
@@ -217,6 +295,7 @@
         </section>
       </div>
     </main>
+    <script src="./src/js/app.js"></script>
     <script src="./src/libs/fa/js/all.js"></script>
   </body>
 </html>

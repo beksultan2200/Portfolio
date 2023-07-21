@@ -19,7 +19,12 @@
 body{
   background: var(--bg-color);
   color: var(--text-color);
+  &.active{
+    height: 100vh;
+    overflow: hidden;
+  }
 }
+
 
 a{
   position: relative;
@@ -46,7 +51,36 @@ a{
     }
 }
 
-@import './nav';
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.container{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.col-7{
+  width: 60%
+}
+
+.col-5{
+  width: 40%;
+}
+
+.col-3{
+  width: 25%;
+}
+
+.col-2{
+  width: 16.6%;
+}
+
+
+
+@import './header';
 @import './hero';
 @import './about';
 @import './experience';

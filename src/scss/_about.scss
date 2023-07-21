@@ -1,15 +1,15 @@
 .about{
-  padding: 140px 0;
+  padding: 40px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   &__title{
     position: relative;
-    font-size: calc(var(--index) * 3);
+    font-size: calc(var(--index) * 4);
     line-height: calc(var(--index) * 5);
     &::before{
       position: absolute;
-      bottom: 20%;
+      bottom: 10%;
       content: '';
       display: block;
       width: 100%;
@@ -23,7 +23,7 @@
     flex-direction: column;
     gap: 30px;
     &__p{
-      font-size: calc(var(--index) * 1.2);
+      font-size: calc(var(--index) * 1.5);
     }
   }
 }

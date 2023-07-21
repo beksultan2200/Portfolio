@@ -1,0 +1,118 @@
+.header {
+  padding: 15px 0;
+  &-desktop {
+    display: block;
+  }
+  &-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    &__logo {
+      height: 100%;
+    }
+    &__ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 20px;
+    }
+    &__li {
+      font-size: calc(var(--index) * 1.2);
+    }
+  }
+  &-mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 80%;
+    z-index: 2;
+
+    &-nav {
+      position: relative;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      background: var(--bg-color);
+      &__logo {
+        height: 100%;
+      }
+      &__burger {
+        position: relative;
+        width: 30px;
+        height: 2px;
+        background: var(--primary);
+        &::before {
+          position: absolute;
+          top: -10px;
+          display: block;
+          content: "";
+          width: 30px;
+          height: 2px;
+          background: var(--primary);
+        }
+        &::after {
+          position: absolute;
+          bottom: -10px;
+          display: block;
+          content: "";
+          width: 30px;
+          height: 2px;
+          background: var(--primary);
+        }
+      }
+    }
+    &-menu {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 50px;
+      top: 58px;
+      right: 0;
+      width: 0%;
+      height: 100vh;
+      background: var(--bg-color);
+      z-index: 3;
+      transition: 0.4s;
+      overflow: hidden;
+      &.active {
+        width: 100%;
+        transition: 0.4s;
+      }
+      &__ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 50px;
+        height: 100%;
+        width: 100%;
+        list-style: none;
+      }
+      &__li {
+        font-size: calc(var(--index) * 2.5);
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    padding: 5px 0;
+    &-desktop {
+      display: none;
+    }
+    &-mobile {
+      display: flex;
+    }
+    &-nav {
+      &-mobile {
+        &__burger {
+        }
+      }
+    }
+  }
+}
